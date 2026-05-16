@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+/* ================================
+   Theme Tokens (Tailwind v4)
+================================ */
+@theme {
+  --color-primaryColor: #0067FF;
+  --color-secondaryColor: #FFB60D;
+  --color-purpleColor: #9771FF;
+  --color-irisBlueColor: #01B5D8;
+  --color-headingColor: #181A1E;
+  --color-textColor: #4E545F;
+}
+
+/* ================================
+   Light Theme
+================================ */
+[data-theme='light'] {
+  --body-bg: #ffffff;
+  --bg-color: #ffffff;
+  --menu-bg: #ffffff;
+  --my-color: #ffffff;
+  --primary-color: #0067FF;
+  --secondary-color: #FFB60D;
+  --purple-color: #9771FF;
+  --iris-color: #01B5D8;
+  --heading-color: #181A1E;
+  --text-color: #4E545F;
+}
+
+/* ================================
+   Dark Theme
+================================ */
+[data-theme='dark'] {
+  --body-bg: #121212;
+  --bg-color: #1e293b;
+  --menu-bg: #374151;
+  --my-color: #121212;
+  --primary-color: #0067FF;
+  --secondary-color: #FDE68A;
+  --purple-color: #4B5563;
+  --iris-color: #F3F4F6;
+  --heading-color: #ffffff;
+  --text-color: #c9cdd5;
+}
+
+/* ================================
+   Base
+================================ */
+body {
+  background: var(--body-bg);
+  margin: 0;
+}
+
+/* ================================
+   Layout
+================================ */
+.section {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.container {
+  max-width: 100%;
+  width: 1440px;
+  padding-left: 36px;
+  padding-right: 36px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ================================
+   Typography
+================================ */
+.heading {
+  font-size: 44px;
+  line-height: 54px;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.text-para {
+  color: var(--text-color);
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+/* ================================
+   Buttons
+================================ */
+.btn {
+  display: inline-block;
+  padding: 15px 36px;
+  margin-top: 38px;
+  font-weight: 600;
+  border-radius: 9999px;
+  background: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.88;
+}
+
+/* ================================
+   Header & Hero
+================================ */
+.header {
+  width: 100%;
+  background: url('./assets/images/header-bg.png') center/cover no-repeat;
+  border-bottom: 0.2px solid #e5e7eb;
+}
+
+.hero_section {
+  background: url('./assets/images/hero-bg.png') center/cover no-repeat;
+}
+
+/* ================================
+   Utility
+================================ */
+.numberInput::-webkit-outer-spin-button,
+.numberInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.numberInput[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/* ================================
+   Responsive — Tablet
+================================ */
+@media only screen and (max-width: 1024px) {
+  .container {
+    width: 100%;
+  }
+
+  .section {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+}
+
+/* ================================
+   Responsive — Mobile
+================================ */
+@media only screen and (max-width: 768px) {
+  .heading {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .text-para {
+    font-size: 16px;
+    line-height: 30px;
+    margin-top: 12px;
+  }
+
+  .btn {
+    padding: 12px 28px;
+    margin-top: 24px;
+  }
+}
