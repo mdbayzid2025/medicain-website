@@ -8,7 +8,7 @@ let token;
 
 // Get  token and set token as  header bearer
 const baseQuery = fetchBaseQuery({
-    baseUrl: "https://medicare-server-ashy.vercel.app/api/v1/",
+    baseUrl: "https://medicare-backend-3kf4.vercel.app/api/v1/",
     // baseUrl: "http://localhost:5000/api/v1/",
     prepareHeaders: (headers) => {
         if (token) {
@@ -29,7 +29,6 @@ export const apiSlice = createApi({
                 url: "auth/refresh-token",
                 method: "GET",
             }, api, extraOptions,)
-            console.log(refreshResult)
 
             if (refreshResult?.data) {
                 api.dispatch(receivedToken(refreshResult.data.accessToken))
